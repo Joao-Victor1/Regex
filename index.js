@@ -8,6 +8,7 @@ function trataErro(erro){
     throw new Error(chalk.red(erro.code, "Não há arquivo no caminho."));
 }
 
+//Async Await com Try Catch:
 async function pegaArquivo(caminhoDoArquivo){
     try{
         const texto = await fs.promises.readFile(caminhoDoArquivo, 'utf-8');
@@ -17,6 +18,7 @@ async function pegaArquivo(caminhoDoArquivo){
     }
 }
 
+//Promises:
 // function pegaArquivo(caminhoDoArquivo){
 //     fs.promises
 //     .readFile(caminhoDoArquivo, 'utf-8')
@@ -24,6 +26,7 @@ async function pegaArquivo(caminhoDoArquivo){
 //     .catch((erro) => trataErro(erro))
 // }
 
+//Callback:
 // function pegaArquivo(caminhoDoArquivo){
 //     fs.readFile(caminhoDoArquivo, 'utf-8', (erro, texto) => {
 //         if(erro){
